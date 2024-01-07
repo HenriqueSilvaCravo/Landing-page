@@ -1,0 +1,339 @@
+<section id="about" class="header">
+     <div class="wave"><svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+    </svg></div>
+    <div class="container about-section">
+        <div class="about-text">
+            <h2 class="mb-4">HSC Tech</h2>
+            <p>Somos uma empresa de software comprometida em oferecer soluções inovadoras e personalizadas para atender
+                às necessidades dos nossos clientes.</p>
+            <a href="#servicos" class="btn mt-3">Veja nossos serviços</a>
+        </div>
+        <div class="about-image">
+            <!-- Coloque aqui a tag da sua imagem -->
+            <img src="../../assets/imagens/proteccion-datos-pc-escritorio-formulario-autoriza.png" alt="Descrição da imagem">
+        </div>
+    </div>
+</section>
+
+<!-- ====== Servicos ====== -->
+<div class="container" id="servicos">
+    <h1 class="title mb-2">Serviços</h1>
+    <div class="hr"></div>
+    <div id="myCarousel" class="carousel slide mb-5" data-ride="carousel">
+        <div class="carousel-inner text-center">
+            <div *ngFor="let groupIndex of getGroupIndices()" class="carousel-item mb-3 mt-5 "
+                [class.active]="groupIndex === activeGroupIndex">
+                <div class="row justify-content-center">
+                    <div *ngFor="let card of getCardsInGroup(groupIndex)" class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card">
+                            <div class="card-body mt-2">
+                                <span class="circle"><i class="fas {{ card.icon }}"></i></span>
+                                <h5 class="card-title mt-2">{{ card.title }}</h5>
+                                <p>{{card.subtitle}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-controls-container">
+            <a class="carousel-control-prev" href="javascript:void(0)" (click)="prevGroup()" role="button"
+                data-slide="prev">
+                <i class="fas fa-chevron-left"></i>
+            </a>
+            <a class="carousel-control-next" href="javascript:void(0)" (click)="nextGroup()" role="button"
+                data-slide="next">
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+        <div class="group-indicators">
+            <button *ngFor="let index of getGroupIndices()" class="group-indicator"
+                [class.active]="index === activeGroupIndex" (click)="goToGroup(index)">
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- ====== Planos ======= -->
+<div style="background: #fafafa; padding-top: 20px;">
+<h1 class="title mb-2 mt-3" id="planos">Planos Mensais</h1>
+<div class="hr"></div>
+</div>
+<section class="pricing">
+    <div class="tab">
+        <div class="price">
+            <h1>R$10</h1>
+            <small>/mês</small>
+        </div>
+        <div class="shadow-container">
+            <div class="tab-header">
+                <div class="title2">
+                    <h1>Básico</h1>
+                    <p>Plano básico</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-body">
+            <ul>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <span>Desenvolvimento Web</span>
+                </li>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <span>Suporte Técnico Básico</span>
+                </li>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <span>Backup Diário</span>
+                </li>
+                <li>
+                    <i class="fas fa-times"></i>
+                    <span>Desenvolvimento Web Avançado</span>
+                </li>
+                <li>
+                    <i class="fas fa-times"></i>
+                    <span>Suporte Técnico Prioritário</span>
+                </li>
+                <li>
+                    <i class="fas fa-times"></i>
+                    <span>Backup Diário e Semanal</span>
+                </li>
+                <li>
+                    <i class="fas fa-times"></i>
+                    <span>Consultoria Mensal</span>
+                </li>
+                <li>
+                    <i class="fas fa-times"></i>
+                    <span>Desenvolvimento Web Personalizado</span>
+                </li>
+                <li>
+                    <i class="fas fa-times"></i>
+                    <span>Suporte Técnico 24/7</span>
+                </li>
+                <li>
+                    <i class="fas fa-times"></i>
+                    <span>Backup Diário, Semanal e Mensal</span>
+                </li>
+                <li>
+                    <i class="fas fa-times"></i>
+                    <span>Consultoria Personalizada</span>
+                </li>
+                <li>
+                    <i class="fas fa-times"></i>
+                    <span>Serviços Exclusivos</span>
+                </li>
+            </ul>
+        </div>
+        <button><a href="#contato">Escolher plano</a></button>
+    </div>
+    <!-- ======== BASCIO FIM ========= -->
+
+    <div class="tab">
+        <div class="price">
+            <h1>R$50</h1>
+            <small>/mês</small>
+        </div>
+        <div class="shadow-container">
+            <div class="tab-header">
+                <div class="title2">
+                    <h1>Premium</h1>
+                    <p>Plano premium</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-body">
+            <ul>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <span>Desenvolvimento Web</span>
+                </li>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <span>Suporte Técnico Básico</span>
+                </li>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <span>Backup Diário</span>
+                </li>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <span>Desenvolvimento Web Avançado</span>
+                </li>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <span>Suporte Técnico Prioritário</span>
+                </li>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <span>Backup Diário e Semanal</span>
+                </li>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <span>Consultoria Mensal</span>
+                </li>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <span>Desenvolvimento Web Personalizado</span>
+                </li>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <span>Suporte Técnico 24/7</span>
+                </li>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <span>Backup Diário, Semanal e Mensal</span>
+                </li>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <span>Consultoria Personalizada</span>
+                </li>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <span>Serviços Exclusivos</span>
+                </li>
+            </ul>
+        </div>
+        <button><a href="#contato">Escolher plano</a></button>
+    </div>
+    <!-- ========== MEDIO FIM ========== -->
+
+    <div class="tab">
+        <div class="price">
+            <h1>R$25</h1>
+            <small>/mês</small>
+        </div>
+
+        <div class="shadow-container">
+            <div class="tab-header">
+                <div class="title2">
+                    <h1>Médio</h1>
+                    <p>Plano médio</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-body">
+            <ul>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <span>Desenvolvimento Web</span>
+                </li>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <span>Suporte Técnico Básico</span>
+                </li>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <span>Backup Diário</span>
+                </li>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <span>Desenvolvimento Web Avançado</span>
+                </li>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <span>Suporte Técnico Prioritário</span>
+                </li>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <span>Backup Diário e Semanal</span>
+                </li>
+                <li>
+                    <i class="fas fa-check"></i>
+                    <span>Consultoria Mensal</span>
+                </li>
+                <li>
+                    <i class="fas fa-times"></i>
+                    <span>Desenvolvimento Web Personalizado</span>
+                </li>
+                <li>
+                    <i class="fas fa-times"></i>
+                    <span>Suporte Técnico 24/7</span>
+                </li>
+                <li>
+                    <i class="fas fa-times"></i>
+                    <span>Backup Diário, Semanal e Mensal</span>
+                </li>
+                <li>
+                    <i class="fas fa-times"></i>
+                    <span>Consultoria Personalizada</span>
+                </li>
+                <li>
+                    <i class="fas fa-times"></i>
+                    <span>Serviços Exclusivos</span>
+                </li>
+            </ul>
+        </div>
+        <button><a href="#contato">Escolher plano</a></button>
+    </div>
+</section>
+
+<!-- ====== Contato ====== -->
+<h1 class="title mb-2 mt-5" id="contato">Entre em contato</h1>
+<div class="hr"></div>
+<section class="vh-90 d-flex justify-content-center align-items-center p-4">
+    <div class="row contact-form position-relative" id="cont">
+        <div class="col-md-6 p-0">
+            <iframe
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Campinas-sp+(My%20Buhghgfsiness%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                frameborder="0" allowfullscreen aria-hidden="false" tabindex="0" class="map"></iframe>
+        </div>
+        <div class="col-md-6 p-5 d-flex justify-content-center align-items-center">
+            <form class="w-100" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+                <div class="contact-form-group mb-3">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" formControlName="name" class="form-control">
+                    <div *ngIf="nameControl?.hasError('required') && nameControl?.touched" class="error-message">
+                        O nome é obrigatório.
+                    </div>
+                </div>
+
+                <div class="contact-form-group mb-3">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" formControlName="email" class="form-control">
+                    <div *ngIf="emailControl?.hasError('required') && emailControl?.touched" class="error-message">
+                        O e-mail é obrigatório.
+                    </div>
+                    <div *ngIf="emailControl?.hasError('email') && emailControl?.touched" class="error-message">
+                        Insira um e-mail válido.
+                    </div>
+                </div>
+
+                <div class="contact-form-group mb-3">
+                    <label for="phoneNumber">Telefone:</label>
+                    <input type="text" id="phoneNumber" formControlName="phoneNumber" class="form-control">
+                    <div *ngIf="phoneNumberControl?.hasError('required') && phoneNumberControl?.touched"
+                        class="error-message">
+                        O número de telefone é obrigatório.
+                    </div>
+                    <div *ngIf="phoneNumberControl?.hasError('pattern') && phoneNumberControl?.touched"
+                        class="error-message">
+                        Insira um número de telefone válido.
+                    </div>
+                </div>
+
+                <div class="contact-form-group mb-3">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" formControlName="message" class="form-control"></textarea>
+                    <div *ngIf="messageControl?.hasError('required') && messageControl?.touched" class="error-message">
+                        A mensagem é obrigatória.
+                    </div>
+                </div>
+
+                <button type="submit" class="btn"
+                    style=" background: linear-gradient(331deg, #321d58, #7344c8); color: #fff;">Enviar
+                    Mensagem</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+

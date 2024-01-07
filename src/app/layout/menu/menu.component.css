@@ -1,0 +1,19 @@
+li{
+    padding-right: 10px;
+}
+.hover:hover{
+    border-bottom: 2px solid #fff;
+}
+
+li a {
+    font-weight: 500;
+}
+
+.btn{
+    border: 1px solid #fff;
+}
+
+.btn:hover{
+    background-color: #fff;
+    color: #000!important;
+}
